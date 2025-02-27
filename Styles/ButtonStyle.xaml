@@ -75,7 +75,24 @@
         <Setter Property="Height" Value="50"/>
         <Setter Property="Width" Value="50"/>
         <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Padding="{TemplateBinding Padding}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderThickness" Value="2"/>
+                            <Setter Property="Background" Value="#0FAEFB"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
-    https://cab209.gitbook.io/keyboardtrainer/nachalnye-prigotovleniya/sozdanie-stilei
+
 </ResourceDictionary>
     
