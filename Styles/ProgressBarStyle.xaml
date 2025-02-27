@@ -72,7 +72,10 @@
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Background" Value="#c5c5c5"/>
                         </Trigger>
-                        <Trigger Property="IsIndeterminate" Value="True"/>
+                        <Trigger Property="IsIndeterminate" Value="True">
+                            <Setter TargetName="width1" Property="Width" Value="0.25*"/>
+                            <Setter TargetName="width2" Property="Width" Value="0.725*"/>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
