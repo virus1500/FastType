@@ -11,6 +11,33 @@
         <Setter Property="Padding" Value="5 0"/>
         <Setter Property="Template">
             <Setter.Value>
+                <ControlTemplate TargetType="PasswordBox">
+                    <Border Padding="{TemplateBinding Padding}" BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" CornerRadius="10">
+                        <ScrollViewer x:Name="PART_ContyentHost"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="BorderBrush" Value="#FF0FAEFB" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="DefaulTextBox">
+        <Setter Property="FontFamily" Value="/Resources/Fonts/#Manrope"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="#0a335c"/>
+        <Setter Property="BorderBrush" Value="#FFD8E2E6"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Background" Value="#FFEEF4F6"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="5 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
                     <Border Padding="{TemplateBinding Padding}" BorderThickness="{TemplateBinding BorderThickness}"
                             BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" CornerRadius="10">
@@ -26,6 +53,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+
 
     <Style TargetType="TextBox" x:Key="TypingTutorTextBox">
         <Setter Property="FontFamily" Value="/Resources/Fonts/#Manrope" />
