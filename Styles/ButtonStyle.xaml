@@ -113,8 +113,21 @@
         </Setter>
     </Style>
 
-    <Style TargetType="Button" x:Key="KeyboardKey" BasedOn="{StaticResource KeybordKey}">
-
+    <Style TargetType="Button" x:Key="GrayKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
+        <Setter Property="Background" Value="#ffdbe2e5"/>
     </Style>
+
+
+    <Style TargetType="Button" x:Key="PurpleKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
+        <Setter Property="Background" Value="#ffc9c9fd"/>
+    </Style>
+
+        <Style TargetType="Button" x:Key="GreenKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
+            <Setter Property="Background" Value="#ffaef2c9"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="RedKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
+            <Setter Property="Background" Value="#fffebdca"/>
+        </Style>
 </ResourceDictionary>
     
