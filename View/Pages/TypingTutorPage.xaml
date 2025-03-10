@@ -5,10 +5,95 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FastType.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="TypingTutorPage">
+      d:DesignHeight="582" d:DesignWidth="1240"
+      Title="Тренажер печати">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="KeyboardGrid" Grid.Row="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0">
+                <Button Content="ё"/>
+                <Button Content="1"/>
+                <Button Content="2"/>
+                <Button Content="3"/>
+                <Button Content="4"/>
+                <Button Content="5"/>
+                <Button Content="6"/>
+                <Button Content="7"/>
+                <Button Content="8"/>
+                <Button Content="9"/>
+                <Button Content="0"/>
+                <Button Content="-"/>
+                <Button Content="="/>
+                <Button Content="Backspace"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                <Button Content="Tab"/>
+                <Button Content="й"/>
+                <Button Content="ц"/>
+                <Button Content="у"/>
+                <Button Content="к"/>
+                <Button Content="е"/>
+                <Button Content="н"/>
+                <Button Content="г"/>
+                <Button Content="ш"/>
+                <Button Content="щ"/>
+                <Button Content="з"/>
+                <Button Content="х"/>
+                <Button Content="ъ"/>
+                <Button Content="\"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="4">
+                <Button Content="Caps"/>
+                <Button Content="ф"/>
+                <Button Content="ы"/>
+                <Button Content="в"/>
+                <Button Content="а"/>
+                <Button Content="п"/>
+                <Button Content="р"/>
+                <Button Content="о"/>
+                <Button Content="л"/>
+                <Button Content="д"/>
+                <Button Content="ж"/>
+                <Button Content="э"/>
+                <Button Content="Enter"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="6" >
+                        <Button Content="Shift"/>
+                        <Button Content="я"/>
+                        <Button Content="ч"/>
+                        <Button Content="с"/>
+                        <Button Content="м"/>
+                        <Button Content="и"/>
+                        <Button Content="т"/>
+                        <Button Content="ь"/>
+                        <Button Content="б"/>
+                        <Button Content="ю"/>
+                        <Button Content="."/>
+                        <Button Content="Shift"/>
+            </StackPanel>
+            <StackPanel Grid.Row="9">
+                <Button Content="Space"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>
