@@ -94,18 +94,27 @@
     </Style>
 
     <Style TargetType="Button" x:Key="KeyboardKey">
-        <Setter Property="" Value=""/>
-        <Setter Property="" Value=""/>
-        <Setter Property="" Value=""/>
-        <Setter Property="Width" Value=""/>
-        <Setter Property="Height" Value=""/>
-        <Setter Property="Margin" Value=""/>
-        <Setter Property="Focusable" Value=""/>
-        <Setter Property="Foreground" Value=""/>
+        <Setter Property="Background" Value="LightBlue"/>
+        <Setter Property="BorderBrush" Value="Blue"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Margin" Value="5 0"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Foreground" Value="#0a335c"/>
         <Setter Property="Template">
-            
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
         </Setter>
     </Style>
 
+    <Style TargetType="Button" x:Key="KeyboardKey" BasedOn="{StaticResource KeybordKey}">
+
+    </Style>
 </ResourceDictionary>
     

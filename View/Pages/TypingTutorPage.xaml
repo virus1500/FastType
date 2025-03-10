@@ -44,10 +44,10 @@
                 <Button Content="0"/>
                 <Button Content="-"/>
                 <Button Content="="/>
-                <Button Content="Backspace"/>
+                <Button Content="←" Width="80"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="2">
-                <Button Content="Tab"/>
+                <Button Content="Tab" Width="80"/>
                 <Button Content="й"/>
                 <Button Content="ц"/>
                 <Button Content="у"/>
@@ -63,7 +63,7 @@
                 <Button Content="\"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="4">
-                <Button Content="Caps"/>
+                <Button Content="Caps" Width="100"/>
                 <Button Content="ф"/>
                 <Button Content="ы"/>
                 <Button Content="в"/>
@@ -75,10 +75,10 @@
                 <Button Content="д"/>
                 <Button Content="ж"/>
                 <Button Content="э"/>
-                <Button Content="Enter"/>
+                <Button Content="Enter" Width="90"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="6" >
-                        <Button Content="Shift"/>
+                <Button Content="Shift" Width="125"/>
                         <Button Content="я"/>
                         <Button Content="ч"/>
                         <Button Content="с"/>
@@ -89,10 +89,10 @@
                         <Button Content="б"/>
                         <Button Content="ю"/>
                         <Button Content="."/>
-                        <Button Content="Shift"/>
+                <Button Content="Shift" Width="125"/>
             </StackPanel>
             <StackPanel Grid.Row="9">
-                <Button Content="Space"/>
+                <Button Content="Space" HorizontalAlignment="Center" Width="350"/>
             </StackPanel>
         </Grid>
     </Grid>
