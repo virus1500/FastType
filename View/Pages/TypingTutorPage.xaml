@@ -31,68 +31,68 @@
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal" Grid.Row="0">
-                <Button Content="ё"/>
-                <Button Content="1"/>
-                <Button Content="2"/>
-                <Button Content="3"/>
-                <Button Content="4"/>
-                <Button Content="5"/>
-                <Button Content="6"/>
-                <Button Content="7"/>
-                <Button Content="8"/>
-                <Button Content="9"/>
-                <Button Content="0"/>
-                <Button Content="-"/>
-                <Button Content="="/>
-                <Button Content="←" Width="80"/>
+                <Button Content="ё" Style="{StaticResource GrayKeyboardKey}"/>
+                <Button Content="1" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="2" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="3" Style="{StaticResource GreenKeyboardKey}"/>
+                <Button Content="4" Style="{StaticResource RedKeyboardKey}"/>
+                <Button Content="5" Style="{StaticResource BlueKeyboardKey}"/>
+                <Button Content="6" Style="{StaticResource BlueKeyboardKey}"/>
+                <Button Content="7" Style="{StaticResource YellowKeyboardKey}"/>
+                <Button Content="8" Style="{StaticResource RedKeyboardKey}"/>
+                <Button Content="9" Style="{StaticResource GreenKeyboardKey}"/>
+                <Button Content="0" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="-" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="=" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="←" Style="{StaticResource GrayKeyboardKey}" Width="80"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="2">
-                <Button Content="Tab" Width="80"/>
-                <Button Content="й"/>
-                <Button Content="ц"/>
-                <Button Content="у"/>
-                <Button Content="к"/>
-                <Button Content="е"/>
-                <Button Content="н"/>
-                <Button Content="г"/>
-                <Button Content="ш"/>
-                <Button Content="щ"/>
-                <Button Content="з"/>
-                <Button Content="х"/>
-                <Button Content="ъ"/>
-                <Button Content="\"/>
+                <Button Content="Tab" Style="{StaticResource GrayKeyboardKey}" Width="80"/>
+                <Button Content="й" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="ц" Style="{StaticResource GreenKeyboardKey}"/>
+                <Button Content="у" Style="{StaticResource RedKeyboardKey}"/>
+                <Button Content="к" Style="{StaticResource BlueKeyboardKey}"/>
+                <Button Content="е" Style="{StaticResource BlueKeyboardKey}"/>
+                <Button Content="н" Style="{StaticResource YellowKeyboardKey}"/>
+                <Button Content="г" Style="{StaticResource YellowKeyboardKey}"/>
+                <Button Content="ш" Style="{StaticResource RedKeyboardKey}"/>
+                <Button Content="щ" Style="{StaticResource GreenKeyboardKey}"/>
+                <Button Content="з" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="х" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="ъ" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="\" Style="{StaticResource GrayKeyboardKey}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="4">
-                <Button Content="Caps" Width="100"/>
-                <Button Content="ф"/>
-                <Button Content="ы"/>
-                <Button Content="в"/>
-                <Button Content="а"/>
-                <Button Content="п"/>
-                <Button Content="р"/>
-                <Button Content="о"/>
-                <Button Content="л"/>
-                <Button Content="д"/>
-                <Button Content="ж"/>
-                <Button Content="э"/>
-                <Button Content="Enter" Width="90"/>
+                <Button Content="Caps" Style="{StaticResource GrayKeyboardKey}" Width="100"/>
+                <Button Content="ф" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="ы" Style="{StaticResource GreenKeyboardKey}"/>
+                <Button Content="в" Style="{StaticResource RedKeyboardKey}"/>
+                <Button Content="а" Style="{StaticResource BlueKeyboardKey}"/>
+                <Button Content="п" Style="{StaticResource BlueKeyboardKey}"/>
+                <Button Content="р" Style="{StaticResource YellowKeyboardKey}"/>
+                <Button Content="о" Style="{StaticResource YellowKeyboardKey}"/>
+                <Button Content="л" Style="{StaticResource RedKeyboardKey}"/>
+                <Button Content="д" Style="{StaticResource GreenKeyboardKey}"/>
+                <Button Content="ж" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="э" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="Enter"  Style="{StaticResource GrayKeyboardKey}" Width="90"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="6" >
                 <Button Content="Shift" Width="125"/>
-                        <Button Content="я"/>
-                        <Button Content="ч"/>
-                        <Button Content="с"/>
-                        <Button Content="м"/>
-                        <Button Content="и"/>
-                        <Button Content="т"/>
-                        <Button Content="ь"/>
-                        <Button Content="б"/>
-                        <Button Content="ю"/>
-                        <Button Content="."/>
+                <Button Content="я" Style="{StaticResource GrayKeyboardKey}"/>
+                <Button Content="ч" Style="{StaticResource PurpleKeyboardKey}"/>
+                <Button Content="с" Style="{StaticResource GreenKeyboardKey}"/>
+                <Button Content="м" Style="{StaticResource BlueKeyboardKey}"/>
+                <Button Content="и" Style="{StaticResource BlueKeyboardKey}"/>
+                <Button Content="т" Style="{StaticResource YellowKeyboardKey}"/>
+                <Button Content="ь" Style="{StaticResource YellowKeyboardKey}"/>
+                <Button Content="б" Style="{StaticResource RedKeyboardKey}"/>
+                <Button Content="ю" Style="{StaticResource GreenKeyboardKey}"/>
+                <Button Content="." Style="{StaticResource PurpleKeyboardKey}"/>
                 <Button Content="Shift" Width="125"/>
             </StackPanel>
             <StackPanel Grid.Row="9">
-                <Button Content="Space" HorizontalAlignment="Center" Width="350"/>
+                <Button Content="Space" Style="{StaticResource GrayKeyboardKey}" HorizontalAlignment="Center" Width="350"/>
             </StackPanel>
         </Grid>
     </Grid>
