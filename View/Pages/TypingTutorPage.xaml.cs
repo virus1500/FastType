@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using FastType.AppData;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace FastType.View.Pages
@@ -8,9 +9,12 @@ namespace FastType.View.Pages
     /// </summary>
     public partial class TypingTutorPage : Page
     {
+        private TypingService _typingService;
         public TypingTutorPage()
         {
             InitializeComponent();
+
+            _typingService = new TypingService(KeyboardGrid, TypingTutorTb, TypingTutorTbl);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
