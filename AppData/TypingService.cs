@@ -49,7 +49,6 @@ namespace FastType.AppData
         {
             foreach (var stackPanel in _keyboardGrid.Children.OfType<StackPanel>())
             {
-                //
                 foreach (var button in stackPanel.Children.OfType<Button>())
                 {
                     if (button.Tag.ToString() == key.ToString())
