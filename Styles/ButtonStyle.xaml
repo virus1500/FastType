@@ -115,27 +115,39 @@
 
     <Style TargetType="Button" x:Key="GrayKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
         <Setter Property="Background" Value="#ffdbe2e5"/>
+        <Setter Property="BorderBrush" Value="#ff4c5052"/>
+        <Setter Property="BorderThickness" Value="0"/>
     </Style>
 
 
     <Style TargetType="Button" x:Key="PurpleKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
         <Setter Property="Background" Value="#ffc9c9fd"/>
+        <Setter Property="BorderBrush" Value="#ff2c2d69"/>
+        <Setter Property="BorderThickness" Value="0"/>
     </Style>
 
         <Style TargetType="Button" x:Key="GreenKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
-            <Setter Property="Background" Value="#ffaef2c9"/>
-        </Style>
+        <Setter Property="Background" Value="#ffaef2c9"/>
+        <Setter Property="BorderBrush" Value="#ff1c703e"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
 
         <Style TargetType="Button" x:Key="RedKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
-            <Setter Property="Background" Value="#fffebdca"/>
-        </Style>
+        <Setter Property="Background" Value="#fffebdca"/>
+        <Setter Property="BorderBrush" Value="#ff91162a"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
     
     <Style TargetType="Button" x:Key="BlueKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
-            <Setter Property="Background" Value="#ff9be9e5"/>
-        </Style>
+        <Setter Property="Background" Value="#ff9be9e5"/>
+        <Setter Property="BorderBrush" Value="#ff07635F"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
     
     <Style TargetType="Button" x:Key="YellowKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
-            <Setter Property="Background" Value="#ffffea9f"/>
-        </Style>
+        <Setter Property="Background" Value="#ffffea9f"/>
+        <Setter Property="BorderBrush" Value="#ff806515"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
 </ResourceDictionary>
     
