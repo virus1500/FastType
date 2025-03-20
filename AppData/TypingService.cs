@@ -25,9 +25,9 @@ namespace FastType.AppData
         private void _typingTextBox_PreviewKeyUp(object sender, System.Windows.Input.KeyEventArgs e)
         {
             var button = FindButtonByKey(e.Key);
-            if (button == null)
+            if (button != null)
             {
-
+                button.BorderThickness = new Thickness(0);
             }
         }
 
