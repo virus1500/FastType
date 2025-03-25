@@ -8,6 +8,7 @@
       d:DesignHeight="582" d:DesignWidth="1240"
       Title="Тренажер печати">
 
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
@@ -22,9 +23,35 @@
         <TextBlock x:Name="TypingTutorTbl" FontSize="35" Foreground="#0a335c" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Тестовый текст, который очень сложно печтать"/>
         <TextBox x:Name="TypingTutorTb" Grid.Row="2" Style="{StaticResource TypingTutorTextBox}"/>
 
-        <!--region Стата-->
-        
-<!--endregion-->
+        <!-- #region Статистика-->
+
+        <Grid Grid.Row="4" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource IconButton}" Focusable="False">
+                <Button.Content>
+                    <Image Source="/Resources/Images/reload-icon.png"/>
+                </Button.Content>
+            </Button>
+            <ProgressBar Name="TypingProgressPb" Grid.Column="2" Minimum="0" Maximum="100" Height="25" Focusable="False"/>
+            <Image Grid.Column="4" Width="30"/>
+            <TextBlock x:Name="AccuracyTbl" Grid.Column="6" Focusable="False" Text="0%"/>
+            <Image Grid.Column="8" Source="/Resources/Images/type-speed-icon.png"/>
+            <TextBlock Grid.Column="10" x:Name="SpeedTbl" Focusable="False" Text="0 СВМ"/>
+        </Grid>
+        <!-- #endregion-->
+
         <!--#region Клавиатура-->
         <Viewbox Grid.Row="6" HorizontalAlignment="Center">
             
