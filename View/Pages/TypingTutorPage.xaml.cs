@@ -14,7 +14,7 @@ namespace FastType.View.Pages
         {
             InitializeComponent();
 
-            _typingService = new TypingService(KeyboardGrid, TypingTutorTb, TypingTutorTbl);
+            _typingService = new TypingService(KeyboardGrid, TypingTutorTb, TypingTutorTbl, SpeedTbl);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

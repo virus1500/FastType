@@ -11,23 +11,23 @@ namespace FastType.AppData
         //Создаем поля для ХРАНИЕНИ и ИСПОЛЬЗОВАНИЕ прерменных для внутренней логики класса
         private Stopwatch _stopWatch;
 
-        private int _numberOfCharacters;
-        private int _ellapsedTimeInMinutes;
-
         //Создали поля для ХРАНЕНИЯ и ИСПОЛЬЗОВАНИЯ элементов управления в рамках класса
 
         private Grid _keyboardGrid;
         private TextBox _typingTextBox;
         private TextBlock _typingTextBlock;
+        private TextBlock _speedTextBlock;
         //Создаем свойство для ПОЛУЧЕНИЯ и ПРИСВАИВАНИЯ расчетов
-        public int TypeSpeed { get; private set; }
+        public double TypeSpeed { get; private set; }
 
         //Создаём конструктор класса для ПРИЁМА элементов кправления из интерфейса (TypingTutorPage.xaml)
-        public TypingService(Grid keyboardGrid, TextBox typingTextBox, TextBlock typingTextBlock)
+        public TypingService(Grid keyboardGrid, TextBox typingTextBox, TextBlock typingTextBlock, TextBlock speedTextBlock)
         {
+            _stopWatch = new Stopwatch();
             _keyboardGrid = keyboardGrid;
             _typingTextBox = typingTextBox;
             _typingTextBlock = typingTextBlock;
+            _speedTextBlock = speedTextBlock;
 
             _typingTextBox.PreviewKeyDown += _typingTextBox_PreviewKeyDown;
             _typingTextBox.PreviewKeyUp += _typingTextBox_PreviewKeyUp;
@@ -38,7 +38,15 @@ namespace FastType.AppData
         {
             if (_typingTextBox.Text.Length >= 1 && !_stopWatch.IsRunning)
             {
-
+                _stopWatch.Start();
+            }
+            if (_typingTextBlock.Text == _typingTextBox.Text)
+            {
+                _stopWatch.Stop();
+            }
+            if (_typingTextBox.Text.Length >= 2)
+            {
+                _speedTextBlock.Text = CalculateSpeed();
             }
         }
 
@@ -79,6 +87,10 @@ namespace FastType.AppData
             }
             return null;
         }
-
+        private string CalculateSpeed()
+        {
+            TypeSpeed = _typingTextBox.Text.Length / _stopWatch.Elapsed.TotalMinutes;
+            return $"{TypeSpeed:F0}";
+        }
     }
 }
