@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,17 +18,20 @@ namespace FastType.AppData
         private TextBox _typingTextBox;
         private TextBlock _typingTextBlock;
         private TextBlock _speedTextBlock;
+        private ProgressBar _progressBar;
         //Создаем свойство для ПОЛУЧЕНИЯ и ПРИСВАИВАНИЯ расчетов
         public double TypeSpeed { get; private set; }
 
         //Создаём конструктор класса для ПРИЁМА элементов кправления из интерфейса (TypingTutorPage.xaml)
-        public TypingService(Grid keyboardGrid, TextBox typingTextBox, TextBlock typingTextBlock, TextBlock speedTextBlock)
+        public TypingService(Grid keyboardGrid, TextBox typingTextBox, TextBlock typingTextBlock, TextBlock speedTextBlock, ProgressBar progressBar)
         {
             _stopWatch = new Stopwatch();
             _keyboardGrid = keyboardGrid;
             _typingTextBox = typingTextBox;
             _typingTextBlock = typingTextBlock;
             _speedTextBlock = speedTextBlock;
+            _progressBar = progressBar;
+
 
             _typingTextBox.PreviewKeyDown += _typingTextBox_PreviewKeyDown;
             _typingTextBox.PreviewKeyUp += _typingTextBox_PreviewKeyUp;
@@ -48,6 +52,7 @@ namespace FastType.AppData
             {
                 _speedTextBlock.Text = CalculateSpeed();
             }
+            UpdateProgress();
         }
 
         private void _typingTextBox_PreviewKeyUp(object sender, System.Windows.Input.KeyEventArgs e)
@@ -90,7 +95,12 @@ namespace FastType.AppData
         private string CalculateSpeed()
         {
             TypeSpeed = _typingTextBox.Text.Length / _stopWatch.Elapsed.TotalMinutes;
-            return $"{TypeSpeed:F0}";
+            return $"{TypeSpeed:F0} СВМ ";
+        }
+        private void UpdateProgress()
+        {
+            double result = _typingTextBox.Text.Length * 100.0 / _typingTextBlock.Text.Length;
+            _progressBar.Value = Math.Floor(result);
         }
     }
 }
